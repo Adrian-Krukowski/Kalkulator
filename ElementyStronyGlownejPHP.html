@@ -15,9 +15,9 @@
 <div class="kolorowo">
 <div class="KlasaWygladKalkulatora">
 <form name="Licznik" method="post" action="ObliczaniePHP.php" >
-    <input class="TextViewLiczbaA" type="textview" name="liczbaA"><br>
+    <input class="TextViewLiczbaA" type="text" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
     <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
-    <input class="TextViewLiczbaB" type="textview" name="liczbaB" ><br>
+    <input class="TextViewLiczbaB" type="textview" id="liczbaB" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
     <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
 
 
@@ -32,7 +32,7 @@
 
         <tr>
           <!--  <td><input class="ButtonSpecjalny" type="button"  value="CE" onclick=""></td> -->
-            <td colspan="2"><input class="buttonZero" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
+            <td colspan="2"><input class="buttonCzyszczenia" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
             <td><input class="ButtonSpecjalny" type="button" value="<<" onclick="usuniecieOstatniegoZnaku()"></td>
             <td><input class="ButtonDzialan" id="dzielenie" name="dzialanie" type="button" value="/" onclick="jedenOperator('/')"></td>
         </tr>

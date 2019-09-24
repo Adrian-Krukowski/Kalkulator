@@ -1,4 +1,4 @@
-var exp = '', sol = '',expA = '',expB = '';
+var exp = '', sol = '',expA = '',expB = '', expO = '';
 
 function czyszczenie(){
     document.Licznik.liczbaA.value ="";
@@ -10,14 +10,16 @@ function czyszczenie(){
 function usuniecieOstatniegoZnaku(){
     expA= document.Licznik.liczbaA.value
     expB= document.Licznik.liczbaB.value
-    exp= document.Licznik.licznikOperator.value;
-    if(expB == "" && exp == ""){
+    expO= document.Licznik.licznikOperator.value;
+
+    if(expB == "" && expO == ""){
 
         document.Licznik.liczbaA.value = expA.substring(0,expA.length-1);
     }
-    else if(expB == "" && exp != ""){
+    else if(expB == "" && expO != ""){
 
-        document.Licznik.licznikOperator.value = exp.substring(0,exp.length-1);
+        document.Licznik.licznikOperator.value = expO.substring(0,exp.length-1);
+        document.Licznik.licznikOperatorUkryty.value = expO.substring(0,exp.length-1);
     }
     else if(expB != ""){
 
@@ -26,16 +28,74 @@ function usuniecieOstatniegoZnaku(){
 }
 
 function insert(liczba) {
-        if(document.Licznik.licznikOperator.value == ''){
-    document.Licznik.liczbaA.value = document.Licznik.liczbaA.value+liczba
+
+            if(document.Licznik.licznikOperator.value == ''){
+                document.Licznik.liczbaA.value = document.Licznik.liczbaA.value+liczba
+
+                //uniemozliwia wpisania dwoch "."
+                if(document.Licznik.liczbaA.value.split('.').length>2)
+                     //"." nie zostanie wpisana ponownie(przeniesiona($))
+                     document.Licznik.liczbaA.value = document.Licznik.liczbaA.value.replace(/\.$/,"");
     }
-        if(document.Licznik.licznikOperator.value != '')
-        {
-        document.Licznik.liczbaB.value = document.Licznik.liczbaB.value+liczba
+            if(document.Licznik.licznikOperator.value != '') {
+                document.Licznik.liczbaB.value = document.Licznik.liczbaB.value+liczba
+
+                if(document.Licznik.liczbaB.value.split('.').length>2)
+                    document.Licznik.liczbaB.value = document.Licznik.liczbaB.value.replace(/\.$/,"");
 
     }
+
+
+}
+function tylkoLiczby(evt, id)
+{
+    try{
+    var keynum;
+    var keychar;
+
+
+    if(evt.which)
+    {
+        keynum = evt.which;
+    }
+    keychar = String.fromCharCode(keynum);
+
+    if(keynum==46){
+        var numcheck=document.getElementById(id).value;
+        if(numcheck.split('.').length<2){
+
+            return true;
+        }
+    }
+    if (keynum < 48 || keynum > 57)
+        return false;
+
+    return true;
+}catch(w){
+    alert(w);
+}
 }
 
+/*function tylkoLiczby(evt,id)
+{
+    try{
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+
+        if(charCode==46){
+            var txt=document.getElementById(id).value;
+            if(txt.split('.').length<2){
+
+                return true;
+            }
+        }
+        if (charCode < 48 || charCode > 57)
+            return false;
+
+        return true;
+    }catch(w){
+        alert(w);
+    }
+}*/
 function jedenOperator(op) {
 
     if(document.Licznik.liczbaA.value != ''){
@@ -51,25 +111,6 @@ function obliczaj(){
 
     }
 }
-
-/* html function jedenOperator(op) {
-        if(jedenOperator = true){
-    exp = document.Licznik.LicznikTekst.value;
-    document.Licznik.LicznikTekst.value = exp + op;
-
-} */
-
-
-
-    //     var operator = document.getElementsByClassName("ButtonDzialan");
-    //     exp = document.Licznik.LicznikTekst.value;
-    //     document.Licznik.LicznikTekst.value = exp + operator;
-
-    //exp = document.Licznik.LicznikTekst.value;
-    //document.Licznik.LicznikTekst.value = exp + op;
-
-
-
 
 function kropka(){
     document.Licznik.LicznikTekst.value = exp + ',';
