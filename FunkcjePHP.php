@@ -1,4 +1,9 @@
 <?php
+/*
+function dzialaj($liczbaA, $dzialanie, $liczbaB, $wynik){
+    eval("$wynik = {$liczbaA} {$dzialanie} {$liczbaB}");
+    echo $wynik;
+}*/
 
 function dodawanie($liczbaA, $liczbaB) {
 
@@ -7,12 +12,12 @@ function dodawanie($liczbaA, $liczbaB) {
 }
 
 function odejmowanie($liczbaA, $liczbaB) {
-    $wynik		= $liczbaA-$liczbaB;
+    $wynik = $liczbaA-$liczbaB;
     echo $wynik;
 }
 
-function mnozenie($liczbaA, $liczbaB) {
-    $wynik		= $liczbaA*$liczbaB;
+function mnozenie($liczbaA, $liczbaB){
+    $wynik = $liczbaA * $liczbaB;
     echo $wynik;
 }
 
@@ -30,27 +35,22 @@ function dzielenie($liczbaA, $liczbaB) {
 
 function pierwiastkowanie($liczbaA) {
     $wynik = sqrt($liczbaA);
-    $liczbaA = $wynik;
+    echo $wynik;
 }
 function potegowanie2($liczbaA){
     $wynik = $liczbaA*$liczbaA;
-    $liczbaA = $wynik;
-}
-
-function potegowanie3($liczbaA){
-    $wynik = $liczbaA*$liczbaA*$liczbaA;
-    $liczbaA = $wynik;
-}
-
-/*function obliczaj()
-{
-    $exp = document.Licznik.LicznikTekst.value;
-    if (exp) {
-        $okno = eval(exp);
-    }
-}*/
-
-function dzialaj($liczbaA, $dzialanie, $liczbaB, $wynik){
-    eval("$wynik = {$liczbaA} {$dzialanie} {$liczbaB}");
     echo $wynik;
 }
+
+function potegowanieDoN($liczbaA, $liczbaB){
+    $wynik = pow($liczbaA, $liczbaB);
+    echo $wynik;
+}
+
+/*function modulo($liczbaA,$liczbaB){
+    $wynik = $liczbaA % $liczbaB;
+    echo $wynik;
+}*/
+
+
+
