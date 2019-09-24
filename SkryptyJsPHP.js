@@ -37,7 +37,11 @@ function insert(liczba) {
                      //"." nie zostanie wpisana ponownie(przeniesiona($))
                      document.Licznik.liczbaA.value = document.Licznik.liczbaA.value.replace(/\.$/,"");
     }
-            if(document.Licznik.licznikOperator.value != '') {
+            //dodatkowa walidacja dla sqrt oraz potegowania ^2
+            if(document.Licznik.licznikOperator.value != ''
+                && document.Licznik.licznikOperator.value != '√'
+                && document.Licznik.licznikOperator.value !=op =='x2') {
+
                 document.Licznik.liczbaB.value = document.Licznik.liczbaB.value+liczba
 
                 if(document.Licznik.liczbaB.value.split('.').length>2)
@@ -96,12 +100,15 @@ function tylkoLiczby(evt, id)
         alert(w);
     }
 }*/
-function jedenOperator(op) {
+function jedenOperator(op, ) {
 
     if(document.Licznik.liczbaA.value != ''){
         document.Licznik.licznikOperator.value = exp + op;
         document.Licznik.licznikOperatorUkryty.value = exp + op;
-
+        if (op=="√" || op =='x2'){
+            document.getElementById("liczbaB").disabled = true;
+            document.Licznik.liczbaB.value = '';
+        }
        }
 }
 

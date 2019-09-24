@@ -3,11 +3,18 @@
 include('FunkcjePHP.php');
 
 $liczbaA = $_POST['liczbaA'];
-$liczbaB = $_POST['liczbaB'];
+
+try {
+    if ($_POST['licznikOperatorUkryty'] =='√'||$_POST['licznikOperatorUkryty'] == 'x2'){
+        $liczbaB='0';
+    }
+    else{
+        $liczbaB = $_POST['liczbaB'];
+    throw new Exception('');}
+}
+catch (Exception $e){};
 
 $dzialanie = $_POST['licznikOperatorUkryty'];
-//echo $dzialanie;
-
 
 
 if ($dzialanie == "+") {
