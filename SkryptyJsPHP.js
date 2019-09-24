@@ -101,7 +101,8 @@ function jedenOperator(op) {
     if(document.Licznik.liczbaA.value != ''){
         document.Licznik.licznikOperator.value = exp + op;
         document.Licznik.licznikOperatorUkryty.value = exp + op;
-    }
+
+       }
 }
 
 function obliczaj(){

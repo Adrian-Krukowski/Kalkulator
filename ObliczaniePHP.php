@@ -22,9 +22,9 @@ if ($dzialanie == "+") {
     pierwiastkowanie($liczbaA);
 }elseif ($dzialanie == "x2") {
     potegowanie2($liczbaA);
-}elseif ($dzialanie == "x3") {
-    potegowanieDoN($liczbaA, $liczbaB);
 }elseif ($dzialanie == "x^n"){
+    potegowanieDoN($liczbaA,$liczbaB);
+}elseif ($dzialanie == "mod"){
     modulo($liczbaA,$liczbaB);
 }
 
