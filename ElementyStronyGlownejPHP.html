@@ -17,7 +17,7 @@
 <form name="Licznik" method="post" action="ObliczaniePHP.php" >
     <input class="TextViewLiczbaA" type="textview" name="liczbaA"><br>
     <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
-    <input class="TextViewLiczbaB" type="textview" name="liczbaB"><br>
+    <input class="TextViewLiczbaB" type="textview" name="liczbaB" ><br>
     <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
 
 
@@ -29,10 +29,11 @@
             <td><input class="ButtonDzialan" id="potegowanie2" type="button" value="x2"></td>
             <td><input class="ButtonDzialan" id="potegowanie3" type="button" value="x3"></td>
         </tr>
+
         <tr>
-            <td><input class="ButtonSpecjalny" type="button"  value="CE" onclick=""></td>
-            <td><input class="ButtonSpecjalny" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
-            <td><input class="ButtonSpecjalny" type="button" value="<--" onclick="usuniecieOstatniegoZnaku()"></td>
+          <!--  <td><input class="ButtonSpecjalny" type="button"  value="CE" onclick=""></td> -->
+            <td colspan="2"><input class="buttonZero" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
+            <td><input class="ButtonSpecjalny" type="button" value="<<" onclick="usuniecieOstatniegoZnaku()"></td>
             <td><input class="ButtonDzialan" id="dzielenie" name="dzialanie" type="button" value="/" onclick="jedenOperator('/')"></td>
         </tr>
 
@@ -66,7 +67,7 @@
 </form>
     </div>
     </div>
-?>
+
 </body>
 
 

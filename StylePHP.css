@@ -50,6 +50,14 @@ body{
     border: none;
 }
 
+.buttonCzyszczenia{
+    width: 108px;
+    height: 50px;
+    font-size: 20px;
+    margin: 1px;
+    border: none;
+}
+
 .TextViewOperator {
 
     margin:1%;
