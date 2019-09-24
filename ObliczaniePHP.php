@@ -16,7 +16,7 @@ catch (Exception $e){};
 
 $dzialanie = $_POST['licznikOperatorUkryty'];
 
-
+//@@@@@@ Zmienic na koniec @@@@@@
 if ($dzialanie == "+") {
     dodawanie($liczbaA, $liczbaB);
 } elseif ($dzialanie == "-") {
@@ -34,12 +34,6 @@ if ($dzialanie == "+") {
 }elseif ($dzialanie == "mod"){
     modulo($liczbaA,$liczbaB);
 }
-
-//$oblicz = isset($_POST['dzialanie']);
-
-/*<form method="get" action="ObliczaniePHP.php" >
-    $liczbaA = liczbaA;
-    $liczbaB = liczbaB;*/
 ?>
 
 

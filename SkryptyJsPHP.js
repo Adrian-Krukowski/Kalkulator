@@ -28,8 +28,7 @@ function usuniecieOstatniegoZnaku(){
 }
 
 function insert(liczba) {
-
-            if(document.Licznik.licznikOperator.value == ''){
+    if(document.Licznik.licznikOperator.value == ''){
                 document.Licznik.liczbaA.value = document.Licznik.liczbaA.value+liczba
 
                 //uniemozliwia wpisania dwoch "."
@@ -40,7 +39,7 @@ function insert(liczba) {
             //dodatkowa walidacja dla sqrt oraz potegowania ^2
             if(document.Licznik.licznikOperator.value != ''
                 && document.Licznik.licznikOperator.value != '√'
-                && document.Licznik.licznikOperator.value !=op =='x2') {
+                && document.Licznik.licznikOperator.value !='x2') {
 
                 document.Licznik.liczbaB.value = document.Licznik.liczbaB.value+liczba
 
@@ -48,9 +47,8 @@ function insert(liczba) {
                     document.Licznik.liczbaB.value = document.Licznik.liczbaB.value.replace(/\.$/,"");
 
     }
-
-
 }
+
 function tylkoLiczby(evt, id)
 {
     try{
@@ -101,14 +99,15 @@ function tylkoLiczby(evt, id)
     }
 }*/
 function jedenOperator(op, ) {
-
     if(document.Licznik.liczbaA.value != ''){
         document.Licznik.licznikOperator.value = exp + op;
         document.Licznik.licznikOperatorUkryty.value = exp + op;
-        if (op=="√" || op =='x2'){
+
+        if (op =="√" || op =='x2'){
             document.getElementById("liczbaB").disabled = true;
             document.Licznik.liczbaB.value = '';
         }
+        else {document.getElementById("liczbaB").disabled = false;}
        }
 }
 
@@ -118,8 +117,4 @@ function obliczaj(){
         document.Licznik.LicznikTekst.value = eval(exp);
 
     }
-}
-
-function kropka(){
-    document.Licznik.LicznikTekst.value = exp + ',';
 }
