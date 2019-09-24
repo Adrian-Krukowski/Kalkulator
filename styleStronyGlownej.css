@@ -1,0 +1,61 @@
+body{
+    marginn:0;
+}
+.KlasaWygladKalkulatora {
+    position: absolute;
+    top: 0%;
+    left: 30%;
+    width:220px;
+    height: 400px;
+    transform: translateX(-50%) translateY(50%);
+    background-color: #efefef;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin:1px;
+    border: none;
+    background-color: white;
+}
+.ButtonSpecjalny {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 1px;
+    border: none;
+}
+
+.ButtonDzialan {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 1px;
+    border: none;
+}
+
+.buttonZero{
+
+    width: 108px;
+    height: 50px;
+    font-size: 20px;
+    margin: 1px;
+    border: none;
+}
+
+.TextViewLicznik {
+    margin:1%;
+    width: 96%;
+    height: 60px;
+    font-size:30px;
+    border: none;
+    background-color: transparent;
+}
+
