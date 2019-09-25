@@ -1,29 +1,93 @@
 body{
-    marginn:10;
+    width: 90%;
+    margin: 0 auto;
+    background: #112c38;
 }
+
 .KlasaWygladKalkulatora {
-    position: absolute;
-    top: 0%;
-    left: 30%;
-    width:220px;
-    height: 480px;
-    transform: translateX(-50%) translateY(50%);
+    position:relative;
+    width: 500px;
+    align-content: center;
+    overflow: auto;
+
+}
+
+.teksty{
+    display:table;
+    position:relative;
+    width:500px;
+    background-color: transparent;
     background-color: #efefef;
+}
+.bop{
+    width: 70%;
+    height: 120px;
+    float:left;
 
 }
 
-*{
-    margin:0;
-    padding:0;
+.TextViewLiczbaA {
+
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
 }
 
+.TextViewLiczbaB {
+    width: 100%;
+    height: 50%;
+    font-size: 30px;
+    border: none;
+    background-color: transparent;
+}
+
+.TextViewOperator {
+
+    margin-top: 12%;
+    width: 20%;
+    height: 60px;
+    font-size: 30px;
+    border: none;
+    float: left;
+    background-color: transparent;
+    text-align: center;
+}
+.przyciski{
+    display:table;
+    margin-top:5%;
+    position:relative;
+    width:100%;
+
+}
 .button {
     width: 50px;
     height: 50px;
-    font-size: 20px;
+    font-size: 30px;
     margin:1px;
     border: none;
     background-color: white;
+
+}
+.znakRownosci{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    margin: 1px;
+    border: none;
+    font-weight: bold;
+
+}
+
+.kropka{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 1px;
+    border: none;
+    font-weight: bold;
+
 }
 .ButtonSpecjalny {
     width: 50px;
@@ -31,6 +95,7 @@ body{
     font-size: 20px;
     margin: 1px;
     border: none;
+
 }
 
 .ButtonDzialan {
@@ -39,6 +104,7 @@ body{
     font-size: 20px;
     margin: 1px;
     border: none;
+
 }
 
 .buttonZero{
@@ -48,6 +114,7 @@ body{
     font-size: 20px;
     margin: 1px;
     border: none;
+
 }
 
 .buttonCzyszczenia{
@@ -57,37 +124,11 @@ body{
     font-size: 20px;
     margin: 1px;
     border: none;
-}
-
-.TextViewOperator {
-
-    margin:1%;
-    width: 24%;
-    height: 60px;
-    font-size:30px;
-    border: none;
-    background-color: transparent;
 
 }
 
-.TextViewLiczbaA {
-    margin-left: 29%;;
-    width: 70%;
-    height: 60px;
-    font-size: 30px;
-    border: none;
-    background-color: transparent;
-    background-color: #efefef;
-}
 
-.TextViewLiczbaB {
 
-    width: 70%;
-    height: 60px;
-    font-size: 30px;
-    border: none;
-    background-color: transparent;
-    background-color: #efefef;
-}
+
 
 

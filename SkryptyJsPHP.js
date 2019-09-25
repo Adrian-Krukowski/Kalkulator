@@ -110,11 +110,3 @@ function jedenOperator(op, ) {
         else {document.getElementById("liczbaB").disabled = false;}
        }
 }
-
-function obliczaj(){
-    exp = document.Licznik.LicznikTekst.value;
-    if(exp){
-        document.Licznik.LicznikTekst.value = eval(exp);
-
-    }
-}

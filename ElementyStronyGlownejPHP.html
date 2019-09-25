@@ -9,65 +9,64 @@
 </head>
 
 <body>
-
-<?
+<nav><h1>Kalkulator nieostateczny</h1></nav>
 <div class="kolorowo">
 <div class="KlasaWygladKalkulatora">
-<form name="Licznik" method="post" action="ObliczaniePHP.php" >
-    <input class="TextViewLiczbaA" type="text" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
-    <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
-    <input class="TextViewLiczbaB" type="textview" id="liczbaB" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
-    <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
+    <div class="teksty">
+    <form name="Licznik" method="post" action="ObliczaniePHP.php" >
+        <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
+        <div class="Bop">   <input class="TextViewLiczbaA" type="text" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
+        <input class="TextViewLiczbaB" type="textview" id="liczbaB" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
+       </div> <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
 
-    <table>
-        <tr>
-            <td><input class="ButtonDzialan" id="procentZ" type="button" value="mod" onclick="jedenOperator('mod')"></td>
-            <td><input class="ButtonDzialan" id="pierwiastkowanie" type="button" value="√" onclick="jedenOperator('√')"></td>
-            <td><input class="ButtonDzialan" id="potegowanie2" type="button" value="x2"onclick="jedenOperator('x2')"></td>
-            <td><input class="ButtonDzialan" id="potegowanie3" type="button" value="x^n"onclick="jedenOperator('x^n')"></td>
-        </tr>
-
-        <tr>
-          <!--  <td><input class="ButtonSpecjalny" type="button"  value="CE" onclick=""></td> -->
-            <td colspan="2"><input class="buttonCzyszczenia" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
-            <td><input class="ButtonSpecjalny" type="button" value="<<" onclick="usuniecieOstatniegoZnaku()"></td>
-            <td><input class="ButtonDzialan" id="dzielenie" name="dzialanie" type="button" value="/" onclick="jedenOperator('/')"></td>
-        </tr>
-
-        <tr>
-            <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
-            <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
-            <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
-            <td><input class="ButtonDzialan" id="mnozenie" type="button" name="dzialanie" value="*" onclick="jedenOperator('*')"></td>
-
-        <tr>
-            <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
-            <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
-            <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
-            <td><input class="ButtonDzialan" id="dodawanie" type="button" name="dzialanie" value="+" onclick="jedenOperator('+')"></td>
-        </tr>
-
-        <tr>
-            <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
-            <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
-            <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
-            <td><input class="ButtonDzialan" id="odejmowanie" type="button" name="dzialanie" value="-" onclick="jedenOperator('-')"></td>
-        </tr>
-
-        <tr>
-            <td colspan="2"><input class="buttonZero" type="button" value="0" onclick="insert(0)"></td>
-            <td><input class="ButtonSpecjalny" id="kropka" type="button" value="." onclick="insert('.')"></td>
-            <td><input class="ButtonSpecjalny" id="wynik" name=wynik type="submit" value="=" ></td>
-        </tr>
-    </table>
-</form>
     </div>
-    </div>
-<div class="wynik">
-    <?
-    <input class="TextViewLiczbaA" type="text" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
-    document.Lic
 
+    <div class="przyciski">
+        <table>
+            <tr>
+                <td><input class="ButtonDzialan" id="procentZ" type="button" value="mod" onclick="jedenOperator('mod')"></td>
+                <td><input class="ButtonDzialan" id="pierwiastkowanie" type="button" value="√" onclick="jedenOperator('√')"></td>
+                <td><input class="ButtonDzialan" id="potegowanie2" type="button" value="x2"onclick="jedenOperator('x2')"></td>
+                <td><input class="ButtonDzialan" id="potegowanie3" type="button" value="x^n"onclick="jedenOperator('x^n')"></td>
+            </tr>
+
+            <tr>
+                <!--  <td><input class="ButtonSpecjalny" type="button"  value="CE" onclick=""></td> -->
+                <td colspan="2"><input class="buttonCzyszczenia" id="czysc" type="button" value="C" onclick="czyszczenie()"></td>
+                <td><input class="ButtonSpecjalny" type="button" value="<<" onclick="usuniecieOstatniegoZnaku()"></td>
+                <td><input class="ButtonDzialan" id="dzielenie" name="dzialanie" type="button" value="/" onclick="jedenOperator('/')"></td>
+            </tr>
+
+            <tr>
+                <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                <td><input class="ButtonDzialan" id="mnozenie" type="button" name="dzialanie" value="*" onclick="jedenOperator('*')"></td>
+
+            <tr>
+                <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                <td><input class="ButtonDzialan" id="dodawanie" type="button" name="dzialanie" value="+" onclick="jedenOperator('+')"></td>
+            </tr>
+
+            <tr>
+                <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+                <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+                <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+                <td><input class="ButtonDzialan" id="odejmowanie" type="button" name="dzialanie" value="-" onclick="jedenOperator('-')"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><input class="buttonZero" type="button" value="0" onclick="insert(0)"></td>
+                <td><input class="kropka" id="kropka" type="button" value="." onclick="insert('.')"></td>
+                <td><input class="znakRownosci" id="wynik" name=wynik type="submit" value="=" ></td>
+            </tr>
+        </table>
+    </div>
+    </form>
 </div>
+</div>
+
 </body>
 </html>

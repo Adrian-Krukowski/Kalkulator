@@ -70,6 +70,8 @@ function modulo($liczbaA,$liczbaB)
         catch(Exception $w) {
         echo $w->getMessage();
     }
+
+
 }
 
 

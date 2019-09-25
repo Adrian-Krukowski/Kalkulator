@@ -16,7 +16,7 @@ catch (Exception $e){};
 
 $dzialanie = $_POST['licznikOperatorUkryty'];
 
-//@@@@@@ Zmienic na koniec @@@@@@
+//@@@@@@ Poprawić jako ostatnie @@@@@@
 if ($dzialanie == "+") {
     dodawanie($liczbaA, $liczbaB);
 } elseif ($dzialanie == "-") {
@@ -31,9 +31,9 @@ if ($dzialanie == "+") {
     potegowanie2($liczbaA);
 }elseif ($dzialanie == "x^n"){
     potegowanieDoN($liczbaA,$liczbaB);
-}elseif ($dzialanie == "mod"){
-    modulo($liczbaA,$liczbaB);
+}elseif ($dzialanie == "mod") {
+    modulo($liczbaA, $liczbaB);
 }
-?>
+
 
 
