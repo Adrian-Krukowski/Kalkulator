@@ -1,23 +1,77 @@
 body{
-    width: 90%;
-    margin: 0 auto;
-    background: #112c38;
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    height: 70vh;
 }
-
-.KlasaWygladKalkulatora {
-    position:relative;
-    width: 500px;
+#ramka
+{
+    border: 2px solid #232121;
+    border-radius: 8px;
+    padding: 1ex;
+}
+#ramkateksty
+{
+    border: 2px solid #232121;
+    border-radius: 8px;
+    padding: 1ex;
+}
+#wygwyglad
+{
+    margin:1%;
+    display: flex;
+    justify-content: center;
     align-content: center;
-    overflow: auto;
+}
+#KlasaWygladKalkulatora {
+
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    background-color: #151414;
 
 }
-
+#kolorowo
+{
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+#przyciski
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav
+{
+    margin:5%;
+    padding:0;
+    display:flex;
+    font-size: 22px;
+    letter-spacing: 4px;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    height: 10vh;
+}
+h1
+{
+    color: #fff;
+}
 .teksty{
-    display:table;
-    position:relative;
-    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: transparent;
-    background-color: #efefef;
+    background-color: #151414;
+}
+form{
+    margin:0;
+    padding: 0;
 }
 .bop{
     width: 70%;
@@ -25,32 +79,33 @@ body{
     float:left;
 
 }
-
 .TextViewLiczbaA {
 
     width: 100%;
     height: 50%;
     font-size: 30px;
+    color: #fff;
     border: none;
+    text-align: center;
     background-color: transparent;
 }
-
 .TextViewLiczbaB {
     width: 100%;
     height: 50%;
+    color: #fff;
     font-size: 30px;
     border: none;
+    text-align: center;
     background-color: transparent;
 }
-
 .TextViewOperator {
-
     margin-top: 12%;
     width: 20%;
     height: 60px;
     font-size: 30px;
     border: none;
     float: left;
+    color: #fff;
     background-color: transparent;
     text-align: center;
 }
@@ -61,68 +116,67 @@ body{
     width:100%;
 
 }
+#modulo, #potegowanie2, #potegowaniexdon, #pierwiastkowanie
+{
+    font-size:25px;
+}
 .button {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     font-size: 30px;
     margin:1px;
     border: none;
     background-color: white;
-
+    border-radius: 10px;
+}
+.ButtonDzialan {
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
+    margin: 1px;
+    border: none;
+    border-radius: 10px;
 }
 .znakRownosci{
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 40px;
     font-size: 20px;
     margin: 1px;
     border: none;
     font-weight: bold;
-
+    border-radius: 10px;
 }
-
 .kropka{
-    width: 50px;
-    height: 50px;
-    font-size: 25px;
-    margin: 1px;
+    margin-left: 25%;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
     border: none;
     font-weight: bold;
-
+    border-radius: 50%;
 }
 .ButtonSpecjalny {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+    width: 80px;
+    height: 40px;
+    font-size: 30px;
     margin: 1px;
-    border: none;
-
+    border-radius: 10px;
 }
-
-.ButtonDzialan {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    margin: 1px;
-    border: none;
-
-}
-
 .buttonZero{
-
-    width: 108px;
-    height: 50px;
-    font-size: 20px;
+    border-radius: 10px;
+    width: 166px;
+    height: 40px;
+    font-size: 30px;
     margin: 1px;
     border: none;
 
 }
-
 .buttonCzyszczenia{
-
-    width: 108px;
-    height: 50px;
-    font-size: 20px;
-    margin: 1px;
+    border-radius: 10px;
+    width: 166px;
+    height: 40px;
+    font-size: 30px;
+    margin: 1%;
     border: none;
 
 }

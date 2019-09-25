@@ -9,25 +9,30 @@
 </head>
 
 <body>
-<nav><h1>Kalkulator nieostateczny</h1></nav>
-<div class="kolorowo">
-<div class="KlasaWygladKalkulatora">
+<div id="kolorowo">
+    <div id="naglowek">
+<nav><h1>Kalkulator (nie)ostateczny</h1></nav>
+    </div>
+    <div id="ramka">
+<div id="wygwyglad">
+<div id="KlasaWygladKalkulatora">
+    <div id="ramkateksty">
     <div class="teksty">
     <form name="Licznik" method="post" action="ObliczaniePHP.php" >
         <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
-        <div class="Bop">   <input class="TextViewLiczbaA" type="text" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
-        <input class="TextViewLiczbaB" type="textview" id="liczbaB" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
+        <div class="Bop">   <input class="TextViewLiczbaA" type="text" maxlength="30" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
+        <input class="TextViewLiczbaB" type="textview" id="liczbaB" maxlength="30" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
        </div> <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
 
     </div>
-
-    <div class="przyciski">
+    </div>
+    <div id="przyciski">
         <table>
             <tr>
-                <td><input class="ButtonDzialan" id="procentZ" type="button" value="mod" onclick="jedenOperator('mod')"></td>
+                <td><input class="ButtonDzialan" id="modulo" type="button" value="mod" onclick="jedenOperator('mod')"></td>
                 <td><input class="ButtonDzialan" id="pierwiastkowanie" type="button" value="√" onclick="jedenOperator('√')"></td>
                 <td><input class="ButtonDzialan" id="potegowanie2" type="button" value="x2"onclick="jedenOperator('x2')"></td>
-                <td><input class="ButtonDzialan" id="potegowanie3" type="button" value="x^n"onclick="jedenOperator('x^n')"></td>
+                <td><input class="ButtonDzialan" id="potegowaniexdon" type="button" value="x^n"onclick="jedenOperator('x^n')"></td>
             </tr>
 
             <tr>
@@ -66,6 +71,8 @@
     </div>
     </form>
 </div>
+</div>
+    </div>
 </div>
 
 </body>
