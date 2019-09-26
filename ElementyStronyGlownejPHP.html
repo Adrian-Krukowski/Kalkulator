@@ -6,6 +6,7 @@
     <title>Kalkulator</title>
     <script src="SkryptyJsPHP.js"></script>
     <link href="stylePHP.css" type="text/css" rel="stylesheet" />
+    include
 </head>
 
 <body>
@@ -20,8 +21,9 @@
     <div class="teksty">
     <form name="Licznik" method="post" action="ObliczaniePHP.php" >
         <input class="TextViewOperator" type="textview" name="licznikOperator" maxlength="1"  disabled>
-        <div class="Bop">   <input class="TextViewLiczbaA" type="text" maxlength="30" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
-        <input class="TextViewLiczbaB" type="textview" id="liczbaB" maxlength="30" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
+        <div class="Bop">
+            <input class="TextViewLiczbaA" type="text" maxlength="30" id="liczbaA" name="liczbaA" onkeypress="return tylkoLiczby(event, this.id)"><br>
+            <input class="TextViewLiczbaB" type="textview" id="liczbaB" maxlength="30" name="liczbaB" onkeypress="return tylkoLiczby(event, this.id)"><br>
        </div> <input class="TextViewOperator" type="hidden" name="licznikOperatorUkryty" maxlength="1"  >
 
     </div>
@@ -65,7 +67,7 @@
             <tr>
                 <td colspan="2"><input class="buttonZero" type="button" value="0" onclick="insert(0)"></td>
                 <td><input class="kropka" id="kropka" type="button" value="." onclick="insert('.')"></td>
-                <td><input class="znakRownosci" id="wynik" name=wynik type="submit" value="=" ></td>
+                <td><input class="znakRownosci" id="wynik" name=wynik type="submit" value="="> </td>
             </tr>
         </table>
     </div>

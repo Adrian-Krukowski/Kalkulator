@@ -1,5 +1,11 @@
 var exp = '', sol = '',expA = '',expB = '', expO = '';
+$(document).ready(function(){
+    cache: 'false',
+        $("#myModal").modal('show');
+    setTimeout(function() {
+        $('#myModal').modal('hide');}, 4000);
 
+});
 function czyszczenie(){
     document.Licznik.liczbaA.value ="";
     document.Licznik.liczbaB.value ="";

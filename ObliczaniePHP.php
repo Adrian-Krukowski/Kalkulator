@@ -1,7 +1,8 @@
 <?php
 
-include('FunkcjePHP.php');
-
+include ('FunkcjePHP.php');
+//include('zmeinnapomocnicza.php');
+//echo wynik;
 $liczbaA = $_POST['liczbaA'];
 
 try {
@@ -18,22 +19,19 @@ $dzialanie = $_POST['licznikOperatorUkryty'];
 
 //@@@@@@ Poprawić jako ostatnie @@@@@@
 if ($dzialanie == "+") {
-    dodawanie($liczbaA, $liczbaB);
+    funkcjeObliczeniowe::dodawanie($liczbaA,$liczbaB);
 } elseif ($dzialanie == "-") {
-    odejmowanie($liczbaA, $liczbaB);
+    funkcjeObliczeniowe::odejmowanie($liczbaA,$liczbaB);
 } elseif ($dzialanie == "*") {
-    mnozenie($liczbaA, $liczbaB);
+    funkcjeObliczeniowe::mnozenie($liczbaA,$liczbaB);
 } elseif ($dzialanie == "/") {
-    dzielenie($liczbaA, $liczbaB);
+    funkcjeObliczeniowe::dzielenie($liczbaA,$liczbaB);
 }elseif ($dzialanie == "√") {
-    pierwiastkowanie($liczbaA);
+    funkcjeObliczeniowe::pierwiastkowanie($liczbaA);
 }elseif ($dzialanie == "x2") {
-    potegowanie2($liczbaA);
+    funkcjeObliczeniowe::potegowanie2($liczbaA);
 }elseif ($dzialanie == "x^n"){
-    potegowanieDoN($liczbaA,$liczbaB);
+    funkcjeObliczeniowe::potegowanieDoN($liczbaA,$liczbaB);
 }elseif ($dzialanie == "mod") {
-    modulo($liczbaA, $liczbaB);
+    funkcjeObliczeniowe::modulo($liczbaA, $liczbaB);
 }
-
-
-
